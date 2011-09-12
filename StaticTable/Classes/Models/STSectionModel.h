@@ -6,8 +6,20 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface STSectionModel : UITableViewController
+@interface STSectionModel : NSObject {
+    id _header;
+    id _footer;
+    
+    NSMutableArray* _cells;
+}
+
+@property (nonatomic, strong) id header;
+@property (nonatomic, strong) id footer;
+@property (nonatomic, strong, readonly) NSMutableArray* cells;
+
+- (void) addCellModel:(id)cell;
+- (id) cellAtIndex:(NSInteger)index;
 
 @end
