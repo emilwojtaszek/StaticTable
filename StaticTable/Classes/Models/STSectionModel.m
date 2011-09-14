@@ -10,27 +10,29 @@
 
 @implementation STSectionModel
 
-@synthesize header = header;
-@synthesize footer = footer;
 @synthesize cells = _cells;
+@synthesize header = _header;
+@synthesize footer = _footer;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)init {
+- (id) initWithCells:(NSArray*)cells {
     self = [super init];
     if (self) {
-        _cells = [[NSMutableArray alloc] init];
+        _cells = cells;
     }
     return self;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) addCellModel:(id)cell {
-    [_cells addObject: cell];
+- (id) initWithHeader:(id)header andFooter:(id)footer cells:(NSArray*)cells {
+    self = [super init];
+    if (self) {
+        _header = header;
+        _footer = footer;
+        _cells = cells;
+    }
+    return self;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) cellAtIndex:(NSInteger)index {
-    [_cells objectAtIndex:index];
-}
 
 @end

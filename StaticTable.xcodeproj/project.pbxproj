@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		202D59C91420FA7B00EF241A /* STCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 202D59C81420FA7B00EF241A /* STCell.m */; };
+		202D5A151421037A00EF241A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9F131141E0BBC00A72BE8 /* Foundation.framework */; };
+		202D5A1B1421037A00EF241A /* StaticTableLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 202D5A1A1421037A00EF241A /* StaticTableLib.m */; };
+		202D5A201421039300EF241A /* STCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 202D59C81420FA7B00EF241A /* STCell.m */; };
+		202D5A211421039300EF241A /* STTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9F156141E0F2400A72BE8 /* STTableViewController.m */; };
+		202D5A221421039300EF241A /* STSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9F15A141E17FD00A72BE8 /* STSectionModel.m */; };
+		202D5A231421039300EF241A /* STCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9F15D141E18E000A72BE8 /* STCellModel.m */; };
 		20F9F130141E0BBC00A72BE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9F12F141E0BBC00A72BE8 /* UIKit.framework */; };
 		20F9F132141E0BBC00A72BE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9F131141E0BBC00A72BE8 /* Foundation.framework */; };
 		20F9F138141E0BBC00A72BE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20F9F136141E0BBC00A72BE8 /* InfoPlist.strings */; };
@@ -18,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		202D59C71420FA7B00EF241A /* STCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCell.h; sourceTree = "<group>"; };
+		202D59C81420FA7B00EF241A /* STCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCell.m; sourceTree = "<group>"; };
+		202D5A141421037A00EF241A /* libStaticTableLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStaticTableLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		202D5A181421037A00EF241A /* StaticTableLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaticTableLib-Prefix.pch"; sourceTree = "<group>"; };
+		202D5A191421037A00EF241A /* StaticTableLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableLib.h; sourceTree = "<group>"; };
+		202D5A1A1421037A00EF241A /* StaticTableLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticTableLib.m; sourceTree = "<group>"; };
 		20F9F12B141E0BBC00A72BE8 /* StaticTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F9F12F141E0BBC00A72BE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20F9F131141E0BBC00A72BE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,6 +49,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		202D5A111421037A00EF241A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202D5A151421037A00EF241A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20F9F128141E0BBC00A72BE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,10 +69,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		202D5A161421037A00EF241A /* StaticTableLib */ = {
+			isa = PBXGroup;
+			children = (
+				202D5A191421037A00EF241A /* StaticTableLib.h */,
+				202D5A1A1421037A00EF241A /* StaticTableLib.m */,
+				202D5A171421037A00EF241A /* Supporting Files */,
+			);
+			path = StaticTableLib;
+			sourceTree = "<group>";
+		};
+		202D5A171421037A00EF241A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				202D5A181421037A00EF241A /* StaticTableLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		20F9F120141E0BBC00A72BE8 = {
 			isa = PBXGroup;
 			children = (
 				20F9F133141E0BBC00A72BE8 /* StaticTable */,
+				202D5A161421037A00EF241A /* StaticTableLib */,
 				20F9F12E141E0BBC00A72BE8 /* Frameworks */,
 				20F9F12C141E0BBC00A72BE8 /* Products */,
 			);
@@ -61,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				20F9F12B141E0BBC00A72BE8 /* StaticTable.app */,
+				202D5A141421037A00EF241A /* libStaticTableLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +150,8 @@
 		20F9F153141E0F2400A72BE8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				202D59C71420FA7B00EF241A /* STCell.h */,
+				202D59C81420FA7B00EF241A /* STCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -135,7 +178,34 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		202D5A121421037A00EF241A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		202D5A131421037A00EF241A /* StaticTableLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 202D5A1E1421037A00EF241A /* Build configuration list for PBXNativeTarget "StaticTableLib" */;
+			buildPhases = (
+				202D5A101421037A00EF241A /* Sources */,
+				202D5A111421037A00EF241A /* Frameworks */,
+				202D5A121421037A00EF241A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StaticTableLib;
+			productName = StaticTableLib;
+			productReference = 202D5A141421037A00EF241A /* libStaticTableLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		20F9F12A141E0BBC00A72BE8 /* StaticTable */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20F9F147141E0BBC00A72BE8 /* Build configuration list for PBXNativeTarget "StaticTable" */;
@@ -174,6 +244,7 @@
 			projectRoot = "";
 			targets = (
 				20F9F12A141E0BBC00A72BE8 /* StaticTable */,
+				202D5A131421037A00EF241A /* StaticTableLib */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +261,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		202D5A101421037A00EF241A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202D5A201421039300EF241A /* STCell.m in Sources */,
+				202D5A211421039300EF241A /* STTableViewController.m in Sources */,
+				202D5A221421039300EF241A /* STSectionModel.m in Sources */,
+				202D5A231421039300EF241A /* STCellModel.m in Sources */,
+				202D5A1B1421037A00EF241A /* StaticTableLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20F9F127141E0BBC00A72BE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +282,7 @@
 				20F9F158141E0F2400A72BE8 /* STTableViewController.m in Sources */,
 				20F9F15B141E17FD00A72BE8 /* STSectionModel.m in Sources */,
 				20F9F15E141E18E000A72BE8 /* STCellModel.m in Sources */,
+				202D59C91420FA7B00EF241A /* STCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +300,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		202D5A1C1421037A00EF241A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/StaticTableLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StaticTableLib/StaticTableLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		202D5A1D1421037A00EF241A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/StaticTableLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StaticTableLib/StaticTableLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		20F9F145141E0BBC00A72BE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -286,6 +394,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		202D5A1E1421037A00EF241A /* Build configuration list for PBXNativeTarget "StaticTableLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				202D5A1C1421037A00EF241A /* Debug */,
+				202D5A1D1421037A00EF241A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		20F9F125141E0BBC00A72BE8 /* Build configuration list for PBXProject "StaticTable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

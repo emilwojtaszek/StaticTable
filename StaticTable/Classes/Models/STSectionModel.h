@@ -6,20 +6,27 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+//Framework
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//Models
+#import "STCellModel.h"
 
 @interface STSectionModel : NSObject {
+
+@protected
     id _header;
     id _footer;
     
-    NSMutableArray* _cells;
+    NSArray* _cells;
 }
 
-@property (nonatomic, strong) id header;
-@property (nonatomic, strong) id footer;
-@property (nonatomic, strong, readonly) NSMutableArray* cells;
+@property (nonatomic, strong, readonly) id header;
+@property (nonatomic, strong, readonly) id footer;
+@property (nonatomic, strong) NSArray* cells;
 
-- (void) addCellModel:(id)cell;
-- (id) cellAtIndex:(NSInteger)index;
+- (id) initWithCells:(NSArray*)cells;
+- (id) initWithHeader:(id)header andFooter:(id)footer cells:(NSArray*)cells;
 
 @end

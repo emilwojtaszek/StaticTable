@@ -8,34 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString* kCellText;
+extern NSString* kCellDetailText;
+extern NSString* kCellIdentifier;
+
 @interface STCellModel : NSObject {
-    NSInteger* _sectionIndex;    
-    UITableViewCell* _cell;
-    
+    Class _cellClass;
+    NSDictionary* _params;
+
     SEL _accessoryButtonTappedAction;
     SEL _didSelectAction;
 }
 
 @property (nonatomic) SEL accessoryButtonTappedAction;
 @property (nonatomic) SEL didSelectAction;
-@property (nonatomic, strong, readonly) UITableViewCell* cell;
+@property (nonatomic, strong) NSDictionary* params;
+@property (nonatomic, assign) Class cellClass;
 
-- (id) initWitSectionIndex:(NSInteger)index;
+- (id) initWithClass:(Class)cellClass;
++ (id) cellWithClass:(Class)cellClass andParams:(NSDictionary*)dict;
 
-@end
-
-@interface STCellModel (Configuration)
-
-/*
- *  Override this method and return proper cell reuse identifier.
- *  Default return model class name
- */
-- (NSString*) reuseIdentifier;
-
-/*
- *  Override this method and return proper cell height.
- *  Default 44.0f
- */
-- (CGFloat) heightOfCell;
+- (NSString*) cellIdentifier;
 
 @end

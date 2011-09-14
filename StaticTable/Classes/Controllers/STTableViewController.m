@@ -12,6 +12,9 @@
 // Other
 #include <objc/message.h>
 
+//Cells
+#import "STCell.h"
+
 @implementation STTableViewController
 
 @synthesize modelStructure = _modelStructure;
@@ -41,7 +44,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (STCellModel*) cellModelAtIndexPath:(NSIndexPath*)indexPath {
     STSectionModel* section = [_modelStructure objectAtIndex:indexPath.section];
-    return [section cellAtIndex:indexPath.row];
+    return [section.cells objectAtIndex:indexPath.row];
 }
 
 #pragma mark -
@@ -49,7 +52,21 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self cellModelAtIndexPath:indexPath] cell];
+
+    STSectionModel* section = [_modelStructure objectAtIndex:indexPath.section];
+    STCellModel* cellModel = [section.cells objectAtIndex:indexPath.row];
+
+    NSString* cellIdentifier = [cellModel cellIdentifier];
+    STCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) 
+    {
+        cell = [[[cellModel cellClass] alloc] initWithReuseIdentifier:cellIdentifier];
+    }
+
+    [cell fillDataWithParams:cellModel.params];
+    
+    return cell;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -63,7 +80,7 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     STSectionModel* sectionModel = [_modelStructure objectAtIndex:section];
     if ([sectionModel.footer isKindOfClass: [NSString class]]) {
         return sectionModel.footer;
@@ -72,7 +89,7 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     STSectionModel* sectionModel = [_modelStructure objectAtIndex:section];
     if ([sectionModel.header isKindOfClass: [NSString class]]) {
         return sectionModel.header;
@@ -85,7 +102,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self cellModelAtIndexPath:indexPath] heightOfCell];
+    return 44.0f;
+//    return [[self cellModelAtIndexPath:indexPath] heightOfCell];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

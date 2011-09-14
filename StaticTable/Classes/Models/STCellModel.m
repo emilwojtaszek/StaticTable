@@ -8,34 +8,40 @@
 
 #import "STCellModel.h"
 
+NSString* kCellText = @"kCellText";
+NSString* kCellDetailText = @"kCellDetailText";
+NSString* kCellIdentifier = @"kCellIdentifier";
+
 @implementation STCellModel
 
 @synthesize accessoryButtonTappedAction = _accessoryButtonTappedAction;
 @synthesize didSelectAction = _didSelectAction;
-@synthesize cell = _cell;
+@synthesize params = _params;
+@synthesize cellClass = _cellClass;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) initWitSectionIndex:(NSInteger)index {
+- (id) initWithClass:(Class)cellClass {
     self = [super init];
     if (self) {
-        NSString* reuseIdentifier = [self reuseIdentifier];
-        _cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+        _cellClass = cellClass;
     }
     return self;
 }
 
-@end
-
-@implementation STCellModel (Configuration)
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString*) reuseIdentifier {
-    return NSStringFromClass([self class]);
++ (id) cellWithClass:(Class)cellClass andParams:(NSDictionary*)dict {
+    STCellModel* model = [[STCellModel alloc] initWithClass:cellClass];
+    [model setParams:dict];
+    return model;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (CGFloat) heightOfCell {
-    return 44.0f;
+- (NSString*) cellIdentifier {
+    NSString* identifier = [_params valueForKey:kCellIdentifier];
+    if (!identifier) {
+        return NSStringFromClass(_cellClass);
+    }
+    return identifier;
 }
 
 @end
