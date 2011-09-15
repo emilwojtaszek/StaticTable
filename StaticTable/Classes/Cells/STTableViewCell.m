@@ -33,18 +33,19 @@
     // Configure the view for the selected state
 }
 
+#pragma mark -
+#pragma mark STTableViewCellDelegate
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) fillDataWithParams:(NSDictionary*)params {
+- (void) configureCellWithParams:(NSDictionary*)params {
     self.textLabel.text = [params valueForKey:kCellText];
     self.detailTextLabel.text = [params valueForKey:kCellDetailText];
 }
-
-#pragma mark -
-#pragma mark STTableViewCellDataSource
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCellStyle)style {
     return UITableViewCellStyleDefault;
 }
+
 @end

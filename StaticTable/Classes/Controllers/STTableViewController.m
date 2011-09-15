@@ -64,7 +64,7 @@
         cell = [[[cellModel cellClass] alloc] initWithReuseIdentifier:cellIdentifier];
     }
 
-    [cell fillDataWithParams:cellModel.params];
+    [cell configureCellWithParams:cellModel.params];
     
     return cell;
 }

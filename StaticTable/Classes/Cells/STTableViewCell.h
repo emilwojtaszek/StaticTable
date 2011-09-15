@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol STTableViewCellDataSource <NSObject>
+@protocol STTableViewCellDelegate <NSObject>
+@required
 - (UITableViewCellStyle)style;
+- (void) configureCellWithParams:(NSDictionary*)params;
 @end
 
-@interface STTableViewCell : UITableViewCell <STTableViewCellDataSource> {
+@interface STTableViewCell : UITableViewCell <STTableViewCellDelegate> {
 
 }
 
@@ -20,10 +22,5 @@
  * Init methods
  */
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
-
-/*
- * Other methods
- */
-- (void) fillDataWithParams:(NSDictionary*)params;
 
 @end

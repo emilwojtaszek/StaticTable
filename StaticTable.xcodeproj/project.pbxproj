@@ -31,6 +31,7 @@
 		202D5A181421037A00EF241A /* StaticTableLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaticTableLib-Prefix.pch"; sourceTree = "<group>"; };
 		202D5A191421037A00EF241A /* StaticTableLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableLib.h; sourceTree = "<group>"; };
 		202D5A1A1421037A00EF241A /* StaticTableLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticTableLib.m; sourceTree = "<group>"; };
+		203E12871421E59A00A394B4 /* STCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCell.h; sourceTree = "<group>"; };
 		20F9F12B141E0BBC00A72BE8 /* StaticTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F9F12F141E0BBC00A72BE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20F9F131141E0BBC00A72BE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,7 +45,6 @@
 		20F9F156141E0F2400A72BE8 /* STTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTableViewController.m; sourceTree = "<group>"; };
 		20F9F159141E17FD00A72BE8 /* STSection.h */ = {isa = PBXFileReference; fileEncoding = 4; path = STSection.h; sourceTree = "<group>"; };
 		20F9F15A141E17FD00A72BE8 /* STSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSection.m; sourceTree = "<group>"; };
-		20F9F15C141E18E000A72BE8 /* STCell.h */ = {isa = PBXFileReference; fileEncoding = 4; path = STCell.h; sourceTree = "<group>"; };
 		20F9F15D141E18E000A72BE8 /* STCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,7 +170,7 @@
 			children = (
 				20F9F159141E17FD00A72BE8 /* STSection.h */,
 				20F9F15A141E17FD00A72BE8 /* STSection.m */,
-				20F9F15C141E18E000A72BE8 /* STCell.h */,
+				203E12871421E59A00A394B4 /* STCell.h */,
 				20F9F15D141E18E000A72BE8 /* STCell.m */,
 			);
 			path = Models;
