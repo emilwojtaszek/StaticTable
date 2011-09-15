@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 // Models
-#import "STCellModel.h"
-#import "STSectionModel.h"
+#import "STCell.h"
+#import "STSection.h"
 
 @interface STTableViewController : UITableViewController {
 
@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong, readonly) NSMutableArray* modelStructure;
 
-- (STCellModel*) cellModelAtIndexPath:(NSIndexPath*)indexPath;
+- (STCell*) cellModelAtIndexPath:(NSIndexPath*)indexPath;
 
 @end
 

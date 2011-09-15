@@ -13,7 +13,7 @@
 #include <objc/message.h>
 
 //Cells
-#import "STCell.h"
+#import "STTableViewCell.h"
 
 @implementation STTableViewController
 
@@ -42,8 +42,8 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (STCellModel*) cellModelAtIndexPath:(NSIndexPath*)indexPath {
-    STSectionModel* section = [_modelStructure objectAtIndex:indexPath.section];
+- (STCell*) cellModelAtIndexPath:(NSIndexPath*)indexPath {
+    STSection* section = [_modelStructure objectAtIndex:indexPath.section];
     return [section.cells objectAtIndex:indexPath.row];
 }
 
@@ -53,11 +53,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    STSectionModel* section = [_modelStructure objectAtIndex:indexPath.section];
-    STCellModel* cellModel = [section.cells objectAtIndex:indexPath.row];
+    STSection* section = [_modelStructure objectAtIndex:indexPath.section];
+    STCell* cellModel = [section.cells objectAtIndex:indexPath.row];
 
     NSString* cellIdentifier = [cellModel cellIdentifier];
-    STCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    STTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) 
     {
@@ -81,7 +81,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    STSectionModel* sectionModel = [_modelStructure objectAtIndex:section];
+    STSection* sectionModel = [_modelStructure objectAtIndex:section];
     if ([sectionModel.footer isKindOfClass: [NSString class]]) {
         return sectionModel.footer;
     }
@@ -90,7 +90,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    STSectionModel* sectionModel = [_modelStructure objectAtIndex:section];
+    STSection* sectionModel = [_modelStructure objectAtIndex:section];
     if ([sectionModel.header isKindOfClass: [NSString class]]) {
         return sectionModel.header;
     }
