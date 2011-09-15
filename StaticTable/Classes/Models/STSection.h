@@ -26,7 +26,10 @@
 @property (nonatomic, strong, readonly) id footer;
 @property (nonatomic, strong) NSArray* cells;
 
-- (id) initWithCells:(id)cell, ... NS_REQUIRES_NIL_TERMINATION;
-- (id) initWithHeader:(id)header andFooter:(id)footer cells:(id)cell, ... NS_REQUIRES_NIL_TERMINATION;
++ (id) sectionWithCells:(id)cell, ... NS_REQUIRES_NIL_TERMINATION;
++ (id) sectionWithHeader:(id)header andFooter:(id)footer cells:(id)cell, ... NS_REQUIRES_NIL_TERMINATION;
+
+- (id) initWithCells:(NSArray*)cells;
+- (id) initWithHeader:(id)header andFooter:(id)footer cells:(NSArray*)cells;
 
 @end
