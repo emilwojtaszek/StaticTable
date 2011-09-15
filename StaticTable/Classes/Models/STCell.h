@@ -6,8 +6,6 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-extern NSString* kCellText;
-extern NSString* kCellDetailText;
 extern NSString* kCellIdentifier;
 
 @interface STCell : NSObject {

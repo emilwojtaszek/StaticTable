@@ -8,8 +8,6 @@
 
 #import "STCell.h"
 
-NSString* kCellText = @"kCellText";
-NSString* kCellDetailText = @"kCellDetailText";
 NSString* kCellIdentifier = @"kCellIdentifier";
 
 @implementation STCell

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "STTableViewController.h"
+#import "StaticTable.h"
 
 @interface ViewController : STTableViewController
 

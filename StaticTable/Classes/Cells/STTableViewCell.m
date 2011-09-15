@@ -8,6 +8,9 @@
 
 #import "STTableViewCell.h"
 
+NSString* kCellText = @"kCellText";
+NSString* kCellDetailText = @"kCellDetailText";
+
 @implementation STTableViewCell
 
 #pragma mark -

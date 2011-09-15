@@ -6,6 +6,9 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+extern NSString* kCellText;
+extern NSString* kCellDetailText;
+
 @protocol STTableViewCellDelegate <NSObject>
 @required
 - (UITableViewCellStyle)style;

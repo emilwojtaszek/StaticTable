@@ -18,3 +18,6 @@
 
 // Other
 #include <objc/message.h>
+
+// Controllers
+#import "STTableViewController.h"
