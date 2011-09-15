@@ -8,9 +8,6 @@
 
 #import "STTableViewCell.h"
 
-// Models
-#import "STCell.h"
-
 @implementation STTableViewCell
 
 #pragma mark -

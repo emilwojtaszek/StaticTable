@@ -25,25 +25,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		202D59C71420FA7B00EF241A /* STTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; path = STTableViewCell.h; sourceTree = "<group>"; };
+		202D59C71420FA7B00EF241A /* STTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTableViewCell.h; sourceTree = "<group>"; };
 		202D59C81420FA7B00EF241A /* STTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTableViewCell.m; sourceTree = "<group>"; };
 		202D5A141421037A00EF241A /* libStaticTableLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStaticTableLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		202D5A181421037A00EF241A /* StaticTableLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaticTableLib-Prefix.pch"; sourceTree = "<group>"; };
 		202D5A191421037A00EF241A /* StaticTableLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableLib.h; sourceTree = "<group>"; };
 		202D5A1A1421037A00EF241A /* StaticTableLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticTableLib.m; sourceTree = "<group>"; };
 		203E12871421E59A00A394B4 /* STCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCell.h; sourceTree = "<group>"; };
+		203E12881421E63E00A394B4 /* StaticTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTable.h; sourceTree = "<group>"; };
+		203E12891421E71E00A394B4 /* StaticTable-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StaticTable-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		20F9F12B141E0BBC00A72BE8 /* StaticTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F9F12F141E0BBC00A72BE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20F9F131141E0BBC00A72BE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20F9F135141E0BBC00A72BE8 /* StaticTable-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StaticTable-Info.plist"; sourceTree = "<group>"; };
 		20F9F137141E0BBC00A72BE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20F9F139141E0BBC00A72BE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		20F9F13B141E0BBC00A72BE8 /* StaticTable-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaticTable-Prefix.pch"; sourceTree = "<group>"; };
 		20F9F13C141E0BBC00A72BE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20F9F13D141E0BBC00A72BE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		20F9F155141E0F2400A72BE8 /* STTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTableViewController.h; sourceTree = "<group>"; };
 		20F9F156141E0F2400A72BE8 /* STTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTableViewController.m; sourceTree = "<group>"; };
-		20F9F159141E17FD00A72BE8 /* STSection.h */ = {isa = PBXFileReference; fileEncoding = 4; path = STSection.h; sourceTree = "<group>"; };
+		20F9F159141E17FD00A72BE8 /* STSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSection.h; sourceTree = "<group>"; };
 		20F9F15A141E17FD00A72BE8 /* STSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSection.m; sourceTree = "<group>"; };
 		20F9F15D141E18E000A72BE8 /* STCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +86,14 @@
 				202D5A181421037A00EF241A /* StaticTableLib-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		203E128A1421E75600A394B4 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				203E12881421E63E00A394B4 /* StaticTable.h */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 		20F9F120141E0BBC00A72BE8 = {
@@ -131,8 +140,8 @@
 			children = (
 				20F9F135141E0BBC00A72BE8 /* StaticTable-Info.plist */,
 				20F9F136141E0BBC00A72BE8 /* InfoPlist.strings */,
+				203E12891421E71E00A394B4 /* StaticTable-Prefix.pch */,
 				20F9F139141E0BBC00A72BE8 /* main.m */,
-				20F9F13B141E0BBC00A72BE8 /* StaticTable-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +149,7 @@
 		20F9F152141E0F2400A72BE8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				203E128A1421E75600A394B4 /* Others */,
 				20F9F153141E0F2400A72BE8 /* Cells */,
 				20F9F154141E0F2400A72BE8 /* Controllers */,
 				20F9F157141E0F2400A72BE8 /* Models */,
@@ -373,7 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StaticTable/StaticTable-Prefix.pch";
+				GCC_PREFIX_HEADER = "StaticTable-Prefix.pch";
 				INFOPLIST_FILE = "StaticTable/StaticTable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -384,7 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StaticTable/StaticTable-Prefix.pch";
+				GCC_PREFIX_HEADER = "StaticTable-Prefix.pch";
 				INFOPLIST_FILE = "StaticTable/StaticTable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

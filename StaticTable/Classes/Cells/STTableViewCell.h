@@ -6,8 +6,6 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @protocol STTableViewCellDelegate <NSObject>
 @required
 - (UITableViewCellStyle)style;

@@ -9,12 +9,6 @@
 // Controllers
 #import "STTableViewController.h"
 
-// Other
-#include <objc/message.h>
-
-//Cells
-#import "STTableViewCell.h"
-
 @implementation STTableViewController
 
 @synthesize modelStructure = _modelStructure;

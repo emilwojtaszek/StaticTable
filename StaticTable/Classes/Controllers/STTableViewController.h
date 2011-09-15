@@ -9,10 +9,6 @@
 // Frameworks
 #import <UIKit/UIKit.h>
 
-// Models
-#import "STCell.h"
-#import "STSection.h"
-
 @interface STTableViewController : UITableViewController {
 
     NSMutableArray* _modelStructure;

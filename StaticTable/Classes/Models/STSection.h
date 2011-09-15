@@ -6,13 +6,6 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-//Framework
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
-//Models
-#import "STCell.h"
-
 @interface STSection : NSObject {
 
 @protected
