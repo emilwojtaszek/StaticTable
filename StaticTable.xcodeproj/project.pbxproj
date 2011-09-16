@@ -22,6 +22,8 @@
 		20F9F158141E0F2400A72BE8 /* STTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9F156141E0F2400A72BE8 /* STTableViewController.m */; };
 		20F9F15B141E17FD00A72BE8 /* STSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9F15A141E17FD00A72BE8 /* STSection.m */; };
 		20F9F15E141E18E000A72BE8 /* STCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9F15D141E18E000A72BE8 /* STCell.m */; };
+		20FC5BCA14229FD70026DA2A /* STTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FC5BC914229FD70026DA2A /* STTextFieldTableViewCell.m */; };
+		20FC5BD11422A38B0026DA2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FC5BD01422A38B0026DA2A /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,9 @@
 		20F9F159141E17FD00A72BE8 /* STSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSection.h; sourceTree = "<group>"; };
 		20F9F15A141E17FD00A72BE8 /* STSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSection.m; sourceTree = "<group>"; };
 		20F9F15D141E18E000A72BE8 /* STCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCell.m; sourceTree = "<group>"; };
+		20FC5BC814229FD70026DA2A /* STTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		20FC5BC914229FD70026DA2A /* STTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		20FC5BD01422A38B0026DA2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20FC5BD11422A38B0026DA2A /* CoreGraphics.framework in Frameworks */,
 				20F9F130141E0BBC00A72BE8 /* UIKit.framework in Frameworks */,
 				20F9F132141E0BBC00A72BE8 /* Foundation.framework in Frameworks */,
 			);
@@ -118,6 +124,7 @@
 		20F9F12E141E0BBC00A72BE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20FC5BD01422A38B0026DA2A /* CoreGraphics.framework */,
 				20F9F12F141E0BBC00A72BE8 /* UIKit.framework */,
 				20F9F131141E0BBC00A72BE8 /* Foundation.framework */,
 			);
@@ -162,6 +169,8 @@
 			children = (
 				202D59C71420FA7B00EF241A /* STTableViewCell.h */,
 				202D59C81420FA7B00EF241A /* STTableViewCell.m */,
+				20FC5BC814229FD70026DA2A /* STTextFieldTableViewCell.h */,
+				20FC5BC914229FD70026DA2A /* STTextFieldTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 				20F9F15B141E17FD00A72BE8 /* STSection.m in Sources */,
 				20F9F15E141E18E000A72BE8 /* STCell.m in Sources */,
 				202D59C91420FA7B00EF241A /* STTableViewCell.m in Sources */,
+				20FC5BCA14229FD70026DA2A /* STTextFieldTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

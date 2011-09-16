@@ -16,6 +16,8 @@ NSString* kCellIdentifier = @"kCellIdentifier";
 @synthesize didSelectAction = _didSelectAction;
 @synthesize params = _params;
 @synthesize cellClass = _cellClass;
+@synthesize inputValue = _inputValue;
+@synthesize initValue = _initValue;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id) initWithClass:(Class)cellClass {

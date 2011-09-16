@@ -15,6 +15,7 @@
 		202D59EC1421015000EF241A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 202D59EB1421015000EF241A /* ViewController.m */; };
 		202D59EF1421015000EF241A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202D59ED1421015000EF241A /* ViewController.xib */; };
 		202D5A29142103AB00EF241A /* libStaticTableLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 202D5A28142103A400EF241A /* libStaticTableLib.a */; };
+		20FC5BC714222F680026DA2A /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FC5BC614222F680026DA2A /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		202D59EB1421015000EF241A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		202D59EE1421015000EF241A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		202D59F51421015B00EF241A /* StaticTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StaticTable.xcodeproj; path = ../StaticTable.xcodeproj; sourceTree = "<group>"; };
+		20FC5BC514222F680026DA2A /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		20FC5BC614222F680026DA2A /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				202D59E81421015000EF241A /* AppDelegate.m */,
 				202D59EA1421015000EF241A /* ViewController.h */,
 				202D59EB1421015000EF241A /* ViewController.m */,
+				20FC5BC514222F680026DA2A /* TableViewCell.h */,
+				20FC5BC614222F680026DA2A /* TableViewCell.m */,
 				202D59ED1421015000EF241A /* ViewController.xib */,
 				202D59DF1421015000EF241A /* Supporting Files */,
 			);
@@ -212,6 +217,7 @@
 				202D59E51421015000EF241A /* main.m in Sources */,
 				202D59E91421015000EF241A /* AppDelegate.m in Sources */,
 				202D59EC1421015000EF241A /* ViewController.m in Sources */,
+				20FC5BC714222F680026DA2A /* TableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
