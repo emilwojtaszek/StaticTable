@@ -20,7 +20,7 @@ NSString* kCellDetailText = @"kCellDetailText";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:[self style] reuseIdentifier:reuseIdentifier];
+    self = [self initWithStyle:[self style] reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
     }

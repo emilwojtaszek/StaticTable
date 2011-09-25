@@ -17,6 +17,7 @@
 // Cells
 #import "STTableViewCell.h"
 #import "STTextFieldTableViewCell.h"
+#import "STButtonTableViewCell.h"
 
 // Other
 #include <objc/message.h>
