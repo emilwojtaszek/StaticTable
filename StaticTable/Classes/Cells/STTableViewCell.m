@@ -10,6 +10,8 @@
 
 @implementation STTableViewCell
 
+@synthesize model = _model;
+
 NSString* kCellText = @"kCellText";
 NSString* kCellDetailText = @"kCellDetailText";
 
@@ -46,6 +48,11 @@ NSString* kCellDetailText = @"kCellDetailText";
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCellStyle)style {
     return UITableViewCellStyleDefault;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (UIResponder*) defualtResponder {
+    return nil;
 }
 
 @end

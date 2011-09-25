@@ -6,8 +6,8 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-//extern NSString* kCellTextFieldText;
-//extern NSString* kCellTextFieldPlaceholder;
+extern NSString* kCellTextFieldText;
+extern NSString* kCellTextFieldPlaceholder;
 
 @interface STTextFieldTableViewCell : STTableViewCell <UITextFieldDelegate> {
     UITextField* _textField;

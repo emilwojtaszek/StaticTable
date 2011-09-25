@@ -10,24 +10,24 @@ extern NSString* kCellIdentifier;
 
 @interface STCell : NSObject {
     Class _cellClass;
-    NSDictionary* _params;
+    NSString* _key;
 
     SEL _accessoryButtonTappedAction;
     SEL _didSelectAction;
     
-    NSString* _inputValue;
-    NSString* _initValue;
+    NSDictionary* _inputParams;
+    NSDictionary* _outputParams;
 }
 
+@property (nonatomic, assign) Class cellClass;
+@property (nonatomic, strong) NSString* key;
 @property (nonatomic) SEL accessoryButtonTappedAction;
 @property (nonatomic) SEL didSelectAction;
-@property (nonatomic, strong) NSDictionary* params;
-@property (nonatomic, assign) Class cellClass;
-@property (nonatomic, strong) NSString* inputValue;
-@property (nonatomic, strong) NSString* initValue;
+@property (nonatomic, strong) NSDictionary* inputParams;
+@property (nonatomic, strong) NSDictionary* outputParams;
 
-- (id) initWithClass:(Class)cellClass;
-+ (id) cellWithClass:(Class)cellClass andParams:(NSDictionary*)dict;
+- (id) initWithClass:(Class)cellClass key:(NSString*)key;
++ (id) cellWithClass:(Class)cellClass key:(NSString*)key params:(NSDictionary*)params;
 
 - (NSString*) cellIdentifier;
 

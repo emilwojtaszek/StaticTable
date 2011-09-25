@@ -58,7 +58,8 @@
         cell = [[[cellModel cellClass] alloc] initWithReuseIdentifier:cellIdentifier];
     }
 
-    [cell configureCellWithParams:cellModel.params];
+    [cell setModel:cellModel];
+    [cell configureCellWithParams:cellModel.inputParams];
     
     return cell;
 }
@@ -112,6 +113,19 @@
     if ((selector) && ([self respondsToSelector:selector])) {
         objc_msgSend(self, selector, self);
     }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    id cell = [tableView cellForRowAtIndexPath:indexPath];
+
+    if ([cell isKindOfClass:[STTextFieldTableViewCell class]]) {
+        [[(STTextFieldTableViewCell*)cell defualtResponder] becomeFirstResponder];
+    }
+    
+    return indexPath;
+    
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

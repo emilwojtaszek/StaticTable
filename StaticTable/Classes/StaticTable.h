@@ -8,6 +8,7 @@
 // Frameworks
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 // Models
 #import "STSection.h"

@@ -14,7 +14,8 @@
 		202D59E91421015000EF241A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 202D59E81421015000EF241A /* AppDelegate.m */; };
 		202D59EC1421015000EF241A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 202D59EB1421015000EF241A /* ViewController.m */; };
 		202D59EF1421015000EF241A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202D59ED1421015000EF241A /* ViewController.xib */; };
-		202D5A29142103AB00EF241A /* libStaticTableLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 202D5A28142103A400EF241A /* libStaticTableLib.a */; };
+		203778EA142CCD9600D7D094 /* libStaticTableLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 202D5A28142103A400EF241A /* libStaticTableLib.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		20377918142CCFDA00D7D094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20377917142CCFDA00D7D094 /* CoreGraphics.framework */; };
 		20FC5BC714222F680026DA2A /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FC5BC614222F680026DA2A /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,13 @@
 			remoteGlobalIDString = 202D5A141421037A00EF241A;
 			remoteInfo = StaticTableLib;
 		};
+		20377906142CCF0900D7D094 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 202D59F51421015B00EF241A /* StaticTable.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 202D5A131421037A00EF241A;
+			remoteInfo = StaticTableLib;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +57,7 @@
 		202D59EB1421015000EF241A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		202D59EE1421015000EF241A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		202D59F51421015B00EF241A /* StaticTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StaticTable.xcodeproj; path = ../StaticTable.xcodeproj; sourceTree = "<group>"; };
+		20377917142CCFDA00D7D094 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		20FC5BC514222F680026DA2A /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		20FC5BC614222F680026DA2A /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202D5A29142103AB00EF241A /* libStaticTableLib.a in Frameworks */,
+				20377918142CCFDA00D7D094 /* CoreGraphics.framework in Frameworks */,
+				203778EA142CCD9600D7D094 /* libStaticTableLib.a in Frameworks */,
 				202D59DB1421015000EF241A /* UIKit.framework in Frameworks */,
 				202D59DD1421015000EF241A /* Foundation.framework in Frameworks */,
 			);
@@ -88,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				202D59F51421015B00EF241A /* StaticTable.xcodeproj */,
+				20377917142CCFDA00D7D094 /* CoreGraphics.framework */,
 				202D59DA1421015000EF241A /* UIKit.framework */,
 				202D59DC1421015000EF241A /* Foundation.framework */,
 			);
@@ -143,6 +154,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				20377907142CCF0900D7D094 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -222,6 +234,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20377907142CCF0900D7D094 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StaticTableLib;
+			targetProxy = 20377906142CCF0900D7D094 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		202D59E11421015000EF241A /* InfoPlist.strings */ = {

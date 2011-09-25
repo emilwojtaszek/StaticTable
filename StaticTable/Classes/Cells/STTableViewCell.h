@@ -13,11 +13,14 @@ extern NSString* kCellDetailText;
 @required
 - (UITableViewCellStyle)style;
 - (void) configureCellWithParams:(NSDictionary*)params;
+- (UIResponder*) defualtResponder;
 @end
 
 @interface STTableViewCell : UITableViewCell <STTableViewCellDelegate> {
-
+    STCell* _model;
 }
+
+@property (nonatomic, strong) STCell* model;
 
 /*
  * Init methods

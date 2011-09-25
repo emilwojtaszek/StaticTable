@@ -64,4 +64,18 @@
     return self;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id) cellForKey:(NSString*)key {
+    __unsafe_unretained __block id item = nil;
+
+    [_cells enumerateObjectsUsingBlock:^(id obj, NSUInteger idx __unused, BOOL *stop) {
+        NSString* cellKey = [obj valueForKey:@"key"];
+        if ([cellKey isEqualToString:key]) {
+            item = obj;
+        }
+    }];
+    
+    return item;
+}
+
 @end

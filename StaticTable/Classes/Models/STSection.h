@@ -25,4 +25,5 @@
 - (id) initWithCells:(NSArray*)cells;
 - (id) initWithHeader:(id)header andFooter:(id)footer cells:(NSArray*)cells;
 
+- (id) cellForKey:(NSString*)key;
 @end
