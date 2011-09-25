@@ -19,6 +19,14 @@ NSString* kCellDetailText = @"kCellDetailText";
 #pragma mark Class methods
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+    }
+    return self;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
     self = [self initWithStyle:[self style] reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -42,6 +50,7 @@ NSString* kCellDetailText = @"kCellDetailText";
 - (void) configureCellWithParams:(NSDictionary*)params {
     self.textLabel.text = [params valueForKey:kCellText];
     self.detailTextLabel.text = [params valueForKey:kCellDetailText];
+    
 }
 
 

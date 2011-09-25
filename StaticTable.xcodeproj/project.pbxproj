@@ -22,6 +22,8 @@
 		2071FD8B142FD50100DD3BA8 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2071FD89142FD42E00DD3BA8 /* UIColor+Additions.m */; };
 		2071FD8E142FD59500DD3BA8 /* STButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2071FD8D142FD59500DD3BA8 /* STButtonTableViewCell.m */; };
 		2071FD8F142FD59D00DD3BA8 /* STButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2071FD8D142FD59500DD3BA8 /* STButtonTableViewCell.m */; };
+		2071FD92142FDA1600DD3BA8 /* STPasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2071FD91142FDA1600DD3BA8 /* STPasswordTableViewCell.m */; };
+		2071FD93142FDAF300DD3BA8 /* STPasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2071FD91142FDA1600DD3BA8 /* STPasswordTableViewCell.m */; };
 		20F9F130141E0BBC00A72BE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9F12F141E0BBC00A72BE8 /* UIKit.framework */; };
 		20F9F132141E0BBC00A72BE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9F131141E0BBC00A72BE8 /* Foundation.framework */; };
 		20F9F138141E0BBC00A72BE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20F9F136141E0BBC00A72BE8 /* InfoPlist.strings */; };
@@ -48,6 +50,8 @@
 		2071FD89142FD42E00DD3BA8 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Additions.m"; path = "Categories/UIColor+Additions.m"; sourceTree = "<group>"; };
 		2071FD8C142FD59500DD3BA8 /* STButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STButtonTableViewCell.h; sourceTree = "<group>"; };
 		2071FD8D142FD59500DD3BA8 /* STButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STButtonTableViewCell.m; sourceTree = "<group>"; };
+		2071FD90142FDA1600DD3BA8 /* STPasswordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPasswordTableViewCell.h; sourceTree = "<group>"; };
+		2071FD91142FDA1600DD3BA8 /* STPasswordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPasswordTableViewCell.m; sourceTree = "<group>"; };
 		20F9F12B141E0BBC00A72BE8 /* StaticTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F9F12F141E0BBC00A72BE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20F9F131141E0BBC00A72BE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +198,8 @@
 				202D59C81420FA7B00EF241A /* STTableViewCell.m */,
 				20FC5BC814229FD70026DA2A /* STTextFieldTableViewCell.h */,
 				20FC5BC914229FD70026DA2A /* STTextFieldTableViewCell.m */,
+				2071FD90142FDA1600DD3BA8 /* STPasswordTableViewCell.h */,
+				2071FD91142FDA1600DD3BA8 /* STPasswordTableViewCell.m */,
 				2071FD8C142FD59500DD3BA8 /* STButtonTableViewCell.h */,
 				2071FD8D142FD59500DD3BA8 /* STButtonTableViewCell.m */,
 			);
@@ -309,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2071FD93142FDAF300DD3BA8 /* STPasswordTableViewCell.m in Sources */,
 				2071FD8F142FD59D00DD3BA8 /* STButtonTableViewCell.m in Sources */,
 				2071FD8B142FD50100DD3BA8 /* UIColor+Additions.m in Sources */,
 				203778AC142CCC3400D7D094 /* STTextFieldTableViewCell.m in Sources */,
@@ -333,6 +340,7 @@
 				20FC5BCA14229FD70026DA2A /* STTextFieldTableViewCell.m in Sources */,
 				2071FD8A142FD42E00DD3BA8 /* UIColor+Additions.m in Sources */,
 				2071FD8E142FD59500DD3BA8 /* STButtonTableViewCell.m in Sources */,
+				2071FD92142FDA1600DD3BA8 /* STPasswordTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

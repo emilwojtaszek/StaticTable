@@ -21,11 +21,11 @@
     
     STCell* model12 = [STCell cellWithClass:[TableViewCell class] 
                                         key:@"model12"
-                                            params:[NSDictionary dictionaryWithObjectsAndKeys:@"text2", kCellText, @"detailText12", kCellDetailText, nil]];
+                                     params:[NSDictionary dictionaryWithObjectsAndKeys:@"text2", kCellText, @"detailText12", kCellDetailText, nil]];
 
     STCell* model13 = [STCell cellWithClass:[STTextFieldTableViewCell class] 
                                         key:@"model13"
-                                  params:[NSDictionary dictionaryWithObjectsAndKeys:@"text2", kCellText, nil]];
+                                     params:[NSDictionary dictionaryWithObjectsAndKeys:@"text2", kCellText, nil]];
                            
     STSection* sectionModel1 = [STSection sectionWithCells:model11, model12, nil];
     STSection* sectionModel2 = [STSection sectionWithHeader:@"2" andFooter:nil cells:model12, model11, model13, nil];

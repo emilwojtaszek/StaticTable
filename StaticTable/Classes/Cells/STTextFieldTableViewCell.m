@@ -8,6 +8,10 @@
 
 #import "STTextFieldTableViewCell.h"
 
+@interface STTextFieldTableViewCell (Private)
+- (void) setupTextFieldForCellStyle:(UITableViewCellStyle)style;
+@end
+
 @implementation STTextFieldTableViewCell
 
 NSString* kCellTextFieldText = @"kCellTextFieldText";
@@ -16,17 +20,43 @@ NSString* kCellTextFieldPlaceholder = @"kCellTextFieldPlaceholder";
 @synthesize textField = _textField;
 
 #pragma mark -
+#pragma mark Private
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) setupTextFieldForCellStyle:(UITableViewCellStyle)style {
+    switch (style) {
+        case UITableViewCellStyleValue1: {
+            [_textField setTextColor:[UIColor tableViewCellValue1BlueColor]];
+            [_textField setTextAlignment: UITextAlignmentRight];
+            break;
+        }
+        case UITableViewCellStyleValue2: {
+            [_textField setTextColor:[UIColor tableViewCellValue2BlueColor]];
+            [_textField setTextAlignment: UITextAlignmentLeft];
+            break;
+        }
+        default: {
+            [_textField setTextColor:[UIColor blackColor]];
+            [_textField setTextAlignment: UITextAlignmentLeft];
+            break;
+        }
+    }
+}
+
+#pragma mark -
 #pragma mark Class methods
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-    self = [self initWithStyle:[self style] reuseIdentifier:reuseIdentifier];
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _textField = [[UITextField alloc] init];
-        _textField.delegate = self;
-        _textField.backgroundColor = [UIColor redColor];
-        self.textLabel.backgroundColor = [UIColor clearColor];
+        [_textField setDelegate: self];
+        [_textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+        [_textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [self setupTextFieldForCellStyle:style];
         [self.contentView addSubview:_textField];
+        [self.textLabel setBackgroundColor:[UIColor clearColor]];
     }
     return self;
 }
@@ -47,7 +77,7 @@ NSString* kCellTextFieldPlaceholder = @"kCellTextFieldPlaceholder";
     
     CGSize textSize = [self.textLabel.text sizeWithFont:self.textLabel.font forWidth:bounds.size.width/2.0f lineBreakMode:UILineBreakModeTailTruncation];
     CGRect newLabelFrame = CGRectMake(CGRectGetMinX(labelFrame), CGRectGetMinY(labelFrame), textSize.width, CGRectGetHeight(labelFrame));
-    CGRect textFieldFrame = CGRectMake(CGRectGetMaxX(newLabelFrame) + 10.0f, CGRectGetMidY(bounds) - (textSize.height)/2.0f, CGRectGetWidth(bounds) - 15.0f - CGRectGetMaxX(newLabelFrame), (textSize.height));
+    CGRect textFieldFrame = CGRectMake(CGRectGetMaxX(newLabelFrame) + 10.0f, CGRectGetMidY(bounds) - (textSize.height)/2.0f, CGRectGetWidth(bounds) - 20.0f - CGRectGetMaxX(newLabelFrame), (textSize.height));
 
     _textField.frame = textFieldFrame;
 }
@@ -65,7 +95,7 @@ NSString* kCellTextFieldPlaceholder = @"kCellTextFieldPlaceholder";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCellStyle)style {
-    return UITableViewCellStyleDefault;
+    return UITableViewCellStyleValue1;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

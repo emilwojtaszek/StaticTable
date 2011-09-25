@@ -17,7 +17,7 @@ NSString* kCellButtonTitle = @"kCellButtonTitle";
     self = [self initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.textLabel.textAlignment = UITextAlignmentCenter;
-        [self.textLabel setText:[UIColor tableViewCellValue1BlueColor]];
+        [self.textLabel setTextColor:[UIColor tableViewCellValue1BlueColor]];
     }
     return self;
 }
