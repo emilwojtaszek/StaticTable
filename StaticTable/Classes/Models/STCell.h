@@ -17,8 +17,13 @@ extern NSString* kCellIdentifier;
     
     NSDictionary* _inputParams;
     NSDictionary* _outputParams;
+
+    UITableViewCellAccessoryType _accessoryType;
+    UITableViewCellSelectionStyle _selectionStyle;
 }
 
+@property (nonatomic, assign) UITableViewCellSelectionStyle selectionStyle;
+@property (nonatomic, assign) UITableViewCellAccessoryType accessoryType;
 @property (nonatomic, assign) Class cellClass;
 @property (nonatomic, strong) NSString* key;
 @property (nonatomic) SEL accessoryButtonTappedAction;

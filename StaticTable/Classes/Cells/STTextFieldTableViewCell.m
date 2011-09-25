@@ -27,7 +27,6 @@ NSString* kCellTextFieldPlaceholder = @"kCellTextFieldPlaceholder";
         _textField.backgroundColor = [UIColor redColor];
         self.textLabel.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:_textField];
-        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;
 }

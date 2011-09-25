@@ -56,6 +56,8 @@
     if (cell == nil) 
     {
         cell = [[[cellModel cellClass] alloc] initWithReuseIdentifier:cellIdentifier];
+        [cell setSelectionStyle: cellModel.selectionStyle];
+        [cell setAccessoryType: cellModel.accessoryType];
     }
 
     [cell setModel:cellModel];

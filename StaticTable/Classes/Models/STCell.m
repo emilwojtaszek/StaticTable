@@ -18,10 +18,22 @@ NSString* kCellIdentifier = @"kCellIdentifier";
 @synthesize outputParams = _outputParams;
 @synthesize cellClass = _cellClass;
 @synthesize key = _key;
+@synthesize accessoryType = _accessoryType;
+@synthesize selectionStyle = _selectionStyle;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)init {
+    self = [super init];
+    if (self) {
+        _accessoryType = UITableViewCellAccessoryNone;
+        _selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return self;
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id) initWithClass:(Class)cellClass key:(NSString*)key {
-    self = [super init];
+    self = [self init];
     if (self) {
         _cellClass = cellClass;
         _key = key;
