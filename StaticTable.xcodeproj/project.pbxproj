@@ -18,6 +18,8 @@
 		203778CA142CCCCE00D7D094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9F12F141E0BBC00A72BE8 /* UIKit.framework */; };
 		203778F3142CCE5700D7D094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203778F2142CCE5700D7D094 /* CoreGraphics.framework */; };
 		203778F4142CCE6100D7D094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203778F2142CCE5700D7D094 /* CoreGraphics.framework */; };
+		2071FD8A142FD42E00DD3BA8 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2071FD89142FD42E00DD3BA8 /* UIColor+Additions.m */; };
+		2071FD8B142FD50100DD3BA8 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2071FD89142FD42E00DD3BA8 /* UIColor+Additions.m */; };
 		20F9F130141E0BBC00A72BE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9F12F141E0BBC00A72BE8 /* UIKit.framework */; };
 		20F9F132141E0BBC00A72BE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9F131141E0BBC00A72BE8 /* Foundation.framework */; };
 		20F9F138141E0BBC00A72BE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20F9F136141E0BBC00A72BE8 /* InfoPlist.strings */; };
@@ -40,6 +42,8 @@
 		203E12871421E59A00A394B4 /* STCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCell.h; sourceTree = "<group>"; };
 		203E12881421E63E00A394B4 /* StaticTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTable.h; sourceTree = "<group>"; };
 		203E12891421E71E00A394B4 /* StaticTable-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StaticTable-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		2071FD88142FD42E00DD3BA8 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Additions.h"; path = "Categories/UIColor+Additions.h"; sourceTree = "<group>"; };
+		2071FD89142FD42E00DD3BA8 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Additions.m"; path = "Categories/UIColor+Additions.m"; sourceTree = "<group>"; };
 		20F9F12B141E0BBC00A72BE8 /* StaticTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F9F12F141E0BBC00A72BE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20F9F131141E0BBC00A72BE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +111,15 @@
 			name = Others;
 			sourceTree = "<group>";
 		};
+		2071FD85142FD3EA00DD3BA8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2071FD88142FD42E00DD3BA8 /* UIColor+Additions.h */,
+				2071FD89142FD42E00DD3BA8 /* UIColor+Additions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		20F9F120141E0BBC00A72BE8 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +174,7 @@
 		20F9F152141E0F2400A72BE8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2071FD85142FD3EA00DD3BA8 /* Categories */,
 				203E128A1421E75600A394B4 /* Others */,
 				20F9F153141E0F2400A72BE8 /* Cells */,
 				20F9F154141E0F2400A72BE8 /* Controllers */,
@@ -289,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2071FD8B142FD50100DD3BA8 /* UIColor+Additions.m in Sources */,
 				203778AC142CCC3400D7D094 /* STTextFieldTableViewCell.m in Sources */,
 				202D5A201421039300EF241A /* STTableViewCell.m in Sources */,
 				202D5A211421039300EF241A /* STTableViewController.m in Sources */,
@@ -309,6 +324,7 @@
 				20F9F15E141E18E000A72BE8 /* STCell.m in Sources */,
 				202D59C91420FA7B00EF241A /* STTableViewCell.m in Sources */,
 				20FC5BCA14229FD70026DA2A /* STTextFieldTableViewCell.m in Sources */,
+				2071FD8A142FD42E00DD3BA8 /* UIColor+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

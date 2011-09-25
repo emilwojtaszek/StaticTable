@@ -23,3 +23,6 @@
 
 // Controllers
 #import "STTableViewController.h"
+
+//Categories
+#import "UIColor+Additions.h"
